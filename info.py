@@ -33,8 +33,8 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', 'mongodb+srv://tmid:tmid@cluster0.ej5ao.mongodb.net/?retryWrites=true&w=majority')
-DATABASE_NAME = environ.get('DATABASE_NAME', 'LazyDeveloper')
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+DATABASE_NAME = environ.get('DATABASE_NAME', 'TMID')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files_free')
 
 # Other
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '1671452210'))
@@ -75,7 +75,7 @@ LAZY_YT_HANDLE = environ.get('LAZY_YT_HANDLE','TMID_CSbot')  # WITHOUT @ [  add 
 MOVIE_GROUP_USERNAME = environ.get('MOVIE_GROUP_USERNAME', "TelMovIDCariFilm") #[ without @ ]
 
 # Url Shortner
-URL_MODE = is_enabled((environ.get("URL_MODE","False")), False)
+URL_MODE = is_enabled((environ.get("URL_MODE","True")), False)
 URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'adpaylink.com') #Always use website url from api section 
 URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', 'b8558449d6716b874e4b862a257c1a206116d787')
 LZURL_PRIME_USERS = [int(lazyurlers) if id_pattern.search(lazyurlers) else lazyurlers for lazyurlers in environ.get('LZURL_PRIME_USERS', '5965340120').split()]
