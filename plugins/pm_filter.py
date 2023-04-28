@@ -265,7 +265,9 @@ async def next_page(bot, query):
                 ]
     btn.insert(0,
         [ 
-	InlineKeyboardButton(text="💡 Bantuan 💡", url='https://t.me/TelMovIDhelp')
+	InlineKeyboardButton(text="👑 Beli VIP", url='https://t.me/TelMovIDhelp/14'),
+	InlineKeyboardButton(text="💡 Cara Download 💡", url='https://t.me/TelMovIDhelp/42'),
+	InlineKeyboardButton(text="Request 📝", url='https://t.me/+tYoMgLhGml1lNzQ1')
         ] 
     )
 
@@ -1228,7 +1230,9 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0,
         [ 
-	InlineKeyboardButton(text="💡 Bantuan 💡", url='https://t.me/TelMovIDhelp')
+	InlineKeyboardButton(text="👑 Beli VIP", url='https://t.me/TelMovIDhelp/14'),
+	InlineKeyboardButton(text="💡 Cara Download 💡", url='https://t.me/TelMovIDhelp/42'),
+	InlineKeyboardButton(text="Request 📝", url='https://t.me/+tYoMgLhGml1lNzQ1')
         ] 
     )
     if offset != "":
@@ -1280,7 +1284,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>👤 User</b>: {message.from_user.mention}\n<b>🔑 Kata Kunci</b>: {search} \n<b>🎞 Jumlah File</b>: {total_results}"
+        cap = f"<b>👤 User</b>: {message.from_user.mention}\n<b>🔑 Kata Kunci</b>: {search} \n<b>🎞 Jumlah File</b>: {total_results}\n\nBeli VIP download tidak melalui web."
     if imdb and imdb.get('poster'):
         try:
             z = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
