@@ -1129,7 +1129,7 @@ async def auto_filter(client, msg, spoll=False):
                                                                                                                                         [InlineKeyboardButton(text=f"🙏 Tidak Tersedia", callback_data=f"notify_user_not_avail:{user_id}:{requested_movie}"),InlineKeyboardButton("❌ Req Ditolak ", callback_data=f"notify_user_req_rejected:{user_id}:{requested_movie}")],
                                                                                                                                         ]))
                 
-                l = await message.reply_text(text=f"Hai Kak `{message.from_user.first_name}`,\n\nMaaf film yang anda cari belum tersedia di database kami.\nTolong bersabarlah!\nAdmin akan mengunggahnya segera mungkin.\n\nRequest\n➟ Judul: `{search}`\n➟ Diminta oleh: `{message.from_user.mention}`\n\n༺ @{MAIN_CHANNEL_USRNM} ༻",
+                l = await message.reply_text(text=f"Hai Kak `{message.from_user.first_name}`\nFilm dengan Judul: `{search}` saat ini tidak tersedia di database kami. 📝<a href='https://t.me/+tYoMgLhGml1lNzQ1'>Request Film Disini</a>📝\n\n༺ @{MAIN_CHANNEL_USRNM} ༻",
                                                                                                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔔 Channel", url=f"https://t.me/TelMovID21"), InlineKeyboardButton("🌐 Web 🌐", url=f"https://linktr.ee/TelMovID"), InlineKeyboardButton("Grup 💬", url=f"https://t.me/+tYoMgLhGml1lNzQ1")],[InlineKeyboardButton("Kirim", callback_data="close_data")]]))
                 await asyncio.sleep(45)
                 await l.delete()    
@@ -1231,8 +1231,7 @@ async def auto_filter(client, msg, spoll=False):
     btn.insert(0,
         [ 
 	InlineKeyboardButton(text="👑 Beli VIP", url='https://t.me/TelMovIDhelp/14'),
-	InlineKeyboardButton(text="💡 Cara Download 💡", url='https://t.me/TelMovIDhelp/42'),
-	InlineKeyboardButton(text="Request 📝", url='https://t.me/+tYoMgLhGml1lNzQ1')
+	InlineKeyboardButton(text="Cara Download 💡", url='https://t.me/TelMovIDhelp/42')
         ] 
     )
     if offset != "":
