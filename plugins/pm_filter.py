@@ -265,9 +265,8 @@ async def next_page(bot, query):
                 ]
     btn.insert(0,
         [ 
-	InlineKeyboardButton(text="👑 Beli VIP", url='https://t.me/TelMovIDhelp/14'),
-	InlineKeyboardButton(text="💡 Cara Download 💡", url='https://t.me/TelMovIDhelp/42'),
-	InlineKeyboardButton(text="Request 📝", url='https://t.me/+tYoMgLhGml1lNzQ1')
+	InlineKeyboardButton(text="🛒 Beli VIP", url='https://t.me/TelMovIDhelp/14'),
+	InlineKeyboardButton(text="Cara Download 📥", url='https://t.me/TelMovIDhelp/42')
         ] 
     )
 
@@ -1129,9 +1128,9 @@ async def auto_filter(client, msg, spoll=False):
                                                                                                                                         [InlineKeyboardButton(text=f"🙏 Tidak Tersedia", callback_data=f"notify_user_not_avail:{user_id}:{requested_movie}"),InlineKeyboardButton("❌ Req Ditolak ", callback_data=f"notify_user_req_rejected:{user_id}:{requested_movie}")],
                                                                                                                                         ]))
                 
-                l = await message.reply_text(text=f"Hai Kak `{message.from_user.first_name}`\nFilm dengan Judul: `{search}` saat ini tidak tersedia di database kami. 📝<a href='https://t.me/+tYoMgLhGml1lNzQ1'>Request Film Disini</a>📝\n\n༺ @{MAIN_CHANNEL_USRNM} ༻",
-                                                                                                       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔔 Channel", url=f"https://t.me/TelMovID21"), InlineKeyboardButton("🌐 Web 🌐", url=f"https://linktr.ee/TelMovID"), InlineKeyboardButton("Grup 💬", url=f"https://t.me/+tYoMgLhGml1lNzQ1")],[InlineKeyboardButton("Kirim", callback_data="close_data")]]))
-                await asyncio.sleep(45)
+                l = await message.reply_text(text=f"Hai Kak `{message.from_user.first_name}`\nFilm dengan Judul: `{search}` saat ini tidak tersedia di database kami. 📝<a href='https://t.me/+tYoMgLhGml1lNzQ1'>Request Film Disini</a>📝\n\n༺ @TelMovIDCariFilm ༻",
+                                                                                                       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🌐 Website 🌐", url=f"https://linktr.ee/TelMovID")],[InlineKeyboardButton("Trimakasih Telah Menggunakan Bot Ini", callback_data="close_data")]]))
+                await asyncio.sleep(60)
                 await l.delete()    
                 if settings["spell_check"]:
                     return await advantage_spell_chok(msg)
@@ -1230,8 +1229,8 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0,
         [ 
-	InlineKeyboardButton(text="👑 Beli VIP", url='https://t.me/TelMovIDhelp/14'),
-	InlineKeyboardButton(text="Cara Download 💡", url='https://t.me/TelMovIDhelp/42')
+	InlineKeyboardButton(text="🛒 Beli VIP", url='https://t.me/TelMovIDhelp/14'),
+	InlineKeyboardButton(text="Cara Download 📥", url='https://t.me/TelMovIDhelp/42')
         ] 
     )
     if offset != "":
@@ -1283,7 +1282,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>👤 User</b>: {message.from_user.mention}\n<b>🔑 Kata Kunci</b>: {search} \n<b>🎞 Jumlah File</b>: {total_results}\n\nBeli VIP download tidak melalui web."
+        cap = f"<b>👤 User</b>: {message.from_user.mention}\n<b>🔑 Kata Kunci</b>: {search} \n<b>🎞 Jumlah File</b>: {total_results}\n\nBeli VIP download tidak melalui website."
     if imdb and imdb.get('poster'):
         try:
             z = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
