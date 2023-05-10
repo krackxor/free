@@ -11,15 +11,15 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-SESSION = environ.get('SESSION', 'Media_search')
+SESSION = environ.get('SESSION', 'BQBrf88ATUmtGZl24bQMxxuqG_5Cjq99VWUJUpPcDiujpTKN3pF2MoOyydwcc-g2y5DABrW8_0sFJbB5OFzCmxY3aJk0V9IKlGAdF1-k1Fxih3uBmYLuHKjqUOAnk7gnQhq042UaDQw1SfBWLaifP2z1-zC1nweNSbGpcI7MkjMD4FJbNNJI_Txt7yKFkypiI-R48IpKeJJyYyIrVz3_xQH0ZWY0L62Rm7xDU_ri-5zIcqKb1G9k9bK4rYKxTIEszHA9bNqcbhXtHQTBq_1MhUrHbwcigSbgcNfqVIcHqVMhh9GLlIJ7MTzK2HaR39BxooH1Kstsp45LSVEpewn_fFQdVrdBIgAAAABKB860AA')
 API_ID = int(environ.get('API_ID', '7045071'))
 API_HASH = environ.get('API_HASH', '1fc084f517e75d6b689d0942cb368847')
-BOT_TOKEN = environ.get('BOT_TOKEN', '5715667099:AAHENoIQBb3LtsW5l8-WKZk6TU_PfOWTm2U')
+BOT_TOKEN = environ.get('BOT_TOKEN', '5602440639:AAHIqUan0gt3hCUwjTVP8SOEXYLjFMqrCZM')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/0049d801d29e83d68b001.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/8b42f6caf6ef5fd76766f.jpg')).split()
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1242025652').split()]
@@ -34,7 +34,7 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', 'mongodb+srv://tmid:tmid@cluster0.d4epj5z.mongodb.net/?retryWrites=true&w=majority')
 DATABASE_NAME = environ.get('DATABASE_NAME', 'TMID')
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files_free')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Other
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '1671452210'))
@@ -55,8 +55,8 @@ PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), False)
 
 #LazyRenamer Configs
-FLOOD = int(environ.get("FLOOD", "10"))
-LAZY_MODE = bool(environ.get("LAZY_MODE"))
+FLOOD = int(environ.get("FLOOD","10"))
+LAZY_MODE = bool(environ.get("LAZY_MODE","True"))
 #Add user id of the user in this field those who you want to be Authentic user for file renaming features
 lazy_renamers = [int(lazrenamers) if id_pattern.search(lazrenamers) else lazrenamers for lazrenamers in environ.get('LAZY_RENAMERS', '1242025652').split()]
 LAZY_RENAMERS = (lazy_renamers + ADMINS) if lazy_renamers else []
@@ -65,7 +65,7 @@ REQ_CHANNEL = int(environ.get('REQ_CHANNEL','-1001481348312'))
 #ai
 AI = is_enabled((environ.get("AI","True")), False)
 OPENAI_API = environ.get("OPENAI_API","")
-LAZY_AI_LOGS = int(environ.get("LAZY_AI_LOGS","-1001951015739")) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of LazyPrincess ]
+LAZY_AI_LOGS = int(environ.get("LAZY_AI_LOGS","-1001782821424")) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of LazyPrincess ]
 
 # Requested Content template variables ---
 ADMIN_USRNM = environ.get('ADMIN_USRNM','TMID_CSbot') # WITHOUT @
