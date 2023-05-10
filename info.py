@@ -33,7 +33,7 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', 'mongodb+srv://tmid:tmid@cluster0.d4epj5z.mongodb.net/?retryWrites=true&w=majority')
-DATABASE_NAME = environ.get('DATABASE_NAME', 'TMIDFilter')
+DATABASE_NAME = environ.get('DATABASE_NAME', 'TMIDfree')
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Other
@@ -56,14 +56,15 @@ PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), False
 
 #LazyRenamer Configs
 FLOOD = int(environ.get("FLOOD","10"))
-LAZY_MODE = bool(environ.get("LAZY_MODE","True"))
+LAZY_MODE = bool(environ.get("LAZY_MODE","False"))
+
 #Add user id of the user in this field those who you want to be Authentic user for file renaming features
 lazy_renamers = [int(lazrenamers) if id_pattern.search(lazrenamers) else lazrenamers for lazrenamers in environ.get('LAZY_RENAMERS', '1242025652').split()]
 LAZY_RENAMERS = (lazy_renamers + ADMINS) if lazy_renamers else []
 REQ_CHANNEL = int(environ.get('REQ_CHANNEL','-1001782821424'))
 
 #ai
-AI = is_enabled((environ.get("AI","True")), False)
+AI = is_enabled((environ.get("AI","False")), False)
 OPENAI_API = environ.get("OPENAI_API","")
 LAZY_AI_LOGS = int(environ.get("LAZY_AI_LOGS","-1001951015739")) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of LazyPrincess ]
 
@@ -78,7 +79,7 @@ MOVIE_GROUP_USERNAME = environ.get('MOVIE_GROUP_USERNAME', "TelMovIDCariFilm") #
 URL_MODE = is_enabled((environ.get("URL_MODE","True")), False)
 URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'adpaylink.com') #Always use website url from api section 
 URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', 'b8558449d6716b874e4b862a257c1a206116d787')
-LZURL_PRIME_USERS = [int(lazyurlers) if id_pattern.search(lazyurlers) else lazyurlers for lazyurlers in environ.get('LZURL_PRIME_USERS', '278863425 5589740908 1051405164 5757728119 1273641025 770781558 1097957505 5844225189 1051405164 1375483871 173986551 1480206230 5439134617 5445484484 1246068270 2092572259 685167092 1565091035 1277882258 1050603521 1053114327 1153569850 594887121 473188819 800772782 1316308663 5096600307 1351058293').split()]
+LZURL_PRIME_USERS = [int(lazyurlers) if id_pattern.search(lazyurlers) else lazyurlers for lazyurlers in environ.get('LZURL_PRIME_USERS', '').split()]
 
 # Auto Delete For Group Message (Self Delete) #
 SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 180))
