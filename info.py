@@ -37,7 +37,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', 'TMIDFilter')
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Other
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '1671452210'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001778980819'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TMID_CSbot')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
@@ -60,12 +60,12 @@ LAZY_MODE = bool(environ.get("LAZY_MODE","True"))
 #Add user id of the user in this field those who you want to be Authentic user for file renaming features
 lazy_renamers = [int(lazrenamers) if id_pattern.search(lazrenamers) else lazrenamers for lazrenamers in environ.get('LAZY_RENAMERS', '1242025652').split()]
 LAZY_RENAMERS = (lazy_renamers + ADMINS) if lazy_renamers else []
-REQ_CHANNEL = int(environ.get('REQ_CHANNEL','-1001481348312'))
+REQ_CHANNEL = int(environ.get('REQ_CHANNEL','-1001782821424'))
 
 #ai
 AI = is_enabled((environ.get("AI","True")), False)
 OPENAI_API = environ.get("OPENAI_API","")
-LAZY_AI_LOGS = int(environ.get("LAZY_AI_LOGS","-1001782821424")) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of LazyPrincess ]
+LAZY_AI_LOGS = int(environ.get("LAZY_AI_LOGS","-1001951015739")) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of LazyPrincess ]
 
 # Requested Content template variables ---
 ADMIN_USRNM = environ.get('ADMIN_USRNM','TMID_CSbot') # WITHOUT @
